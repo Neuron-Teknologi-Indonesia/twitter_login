@@ -26,5 +26,5 @@ dev = [
     "colorlog>=6.10.1",
 ]
 
-[tool.setuptools]
-packages = ["twitter_login"]
+[tool.setuptools.packages.find]
+include = ["twitter_login*"]
