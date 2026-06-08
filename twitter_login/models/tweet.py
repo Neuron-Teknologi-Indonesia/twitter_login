@@ -35,6 +35,7 @@ class Tweet(TweetEntitiesMixin, LazyMixin):
     retweeted: bool
     user_id: str
     source: str
+    conversation_id: str
 
     user: ClassVar[User | None] = Lazy(
         User,
@@ -67,7 +68,8 @@ class Tweet(TweetEntitiesMixin, LazyMixin):
             retweet_count=legacy.get('retweet_count'),
             retweeted=legacy.get('retweeted'),
             user_id=legacy.get('user_id_str'),
-            source=payload.get('source')
+            source=payload.get('source'),
+            conversation_id=legacy.get('conversation_id_str')
         )
 
         if not user:
