@@ -38,7 +38,7 @@ class Tweet(TweetEntitiesMixin, LazyMixin):
 
     user: ClassVar[User | None] = Lazy(
         User,
-        kwargs_factory=lambda x: {'_client': x._client}
+        kwargs_factory=lambda x: {'client': x._client}
     )
     note_tweet: ClassVar[NoteTweet | None] = Lazy(NoteTweet)
     card: ClassVar[Card | None] = Lazy(Card)

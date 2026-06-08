@@ -18,7 +18,7 @@ class User:
     created_at: str
 
     @classmethod
-    def _from_payload(cls, payload: dict, _client: Client):
+    def _from_payload(cls, payload: dict, client: Client):
         core = payload.get('core', {})
         return cls(
             id=payload.get('rest_id'),

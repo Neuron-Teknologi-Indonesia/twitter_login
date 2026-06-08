@@ -3,6 +3,7 @@ from typing import ClassVar
 
 from .base import model
 from .lazy import Lazy
+from .media import Media
 
 
 @model(reprs='url')
@@ -71,9 +72,11 @@ class TweetEntitiesMixin:
     hashtags: ClassVar[list[Hashtag]] = Lazy(Hashtag)
     symbols: ClassVar[list[Symbol]] = Lazy(Symbol)
     mentions: ClassVar[list[Mention]] = Lazy(Mention)
+    media: ClassVar[list[Media]] = Lazy(Media, kwargs_factory=lambda x: {'client': x._client})
 
     def _set_sources_from_entities(self, entities: dict):
         self.urls = entities.get('urls', [])
         self.hashtags = entities.get('hashtags', [])
         self.symbols = entities.get('symbols', [])
         self.mentions = entities.get('user_mentions', [])
+        self.media = entities.get('media', [])
