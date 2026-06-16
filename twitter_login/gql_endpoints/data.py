@@ -77,10 +77,10 @@ REQUIRED_ENDPOINTS_MAPPING = {
 }
 
 BUILDTIME_HASH_MAPPING = {
-    'bundle.DirectMessages': '3c8e8f3',
-    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': '08711e7',
-    'main': '1657c8f',
-    'bundle.Communities': 'dfd3c9f',
+    'bundle.DirectMessages': '49d729c',
+    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': 'e06e765',
+    'main': '0730f87',
+    'bundle.Communities': '304fa90',
     'bundle.TweetEditHistory': '86bb173'
 }
 
@@ -2832,7 +2832,7 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'responsive_web_verified_organizations_free_to_invoice_enabled': False,
     'responsive_web_verified_organizations_free_upgrade_promo_enabled': True,
     'responsive_web_verified_organizations_handle_form_enabled': True,
-    'responsive_web_verified_organizations_idv_enabled': False,
+    'responsive_web_verified_organizations_idv_enabled': True,
     'responsive_web_verified_organizations_insights_enabled': True,
     'responsive_web_verified_organizations_intercom_enabled': True,
     'responsive_web_verified_organizations_invoice_enabled': False,
@@ -3273,7 +3273,7 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'xchat_group_admin_settings_enabled': True,
     'xchat_grpc_chat_page_enabled': False,
     'xchat_hide_pending_members_for_non_admin': True,
-    'xchat_markdown_rendering_enabled': False,
+    'xchat_markdown_rendering_enabled': True,
     'xchat_pay_button_enabled': False,
     'xchat_repair_groups_after_passcode_reset': True,
     'xchat_self_custody_enabled': False,
@@ -3287,15 +3287,15 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'x_android_apollo_graphql_accept_header_override': True,
     'xchat_message_composer_v2': False,
     'payments_web_external_app_enabled': False,
-    'payments_support_grpc_enabled': False,
-    'payments_support_xchat_sessions_enabled': True,
-    'responsive_web_android_quick_promote_stripe_elements_enabled': False,
     'responsive_web_grok_build_tab_relabel_enabled': False,
     'responsive_web_quick_promote_cta_enabled': True,
     'responsive_web_quick_promote_high_budget_tier_enabled': False,
+    'xchat_keypair_recovery_enabled': False,
+    'payments_support_grpc_enabled': False,
+    'payments_support_xchat_sessions_enabled': True,
+    'responsive_web_android_quick_promote_stripe_elements_enabled': False,
     'rweb_cashtags_composer_attachment_size_customization_enabled': True,
     'subscriptions_offers_go_for_launch_copy_enabled': True,
-    'xchat_keypair_recovery_enabled': False,
     'responsive_web_notifications_refresher_enabled': False,
     'web_video_teardown_listener_fix_enabled': False,
     'xchat_enable_message_request_ui_v3': False,

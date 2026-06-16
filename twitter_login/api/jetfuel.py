@@ -60,3 +60,18 @@ class JetfuelClient:
             referer='https://x.com/',
             data=data
         )
+
+    # TODO `username` parameter can be email or phone
+    async def login_enter_password(self, username, password, session_token, castle_token):
+        data = {
+            'username': username,
+            'password': password,
+            'session_token': session_token,
+            '$castle_token': castle_token
+        }
+        return await self.jetfuel_request(
+            'POST',
+            'https://x.com/i/jfapi/onboarding/web/actions/login_enter_password',
+            referer='https://x.com/i/jf/onboarding/web',
+            data=data
+        )
