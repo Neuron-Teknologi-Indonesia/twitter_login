@@ -6,11 +6,13 @@ from typing import TYPE_CHECKING, Any, Awaitable, Callable, Generic, Iterable, I
 if TYPE_CHECKING:
     from .client import Client
 
+
 T = TypeVar('T')
 
 
 class PaginationContext:
     """
+    :meta private:
     Contains pagination context data.
     """
     def __init__(
@@ -40,8 +42,6 @@ class PaginatedResult(Generic[T]):
     def set_instance(self, instance: Client) -> None:
         if not self.__context:
             return
-        if not isinstance(instance, Client):
-            raise TypeError(f'Instance must be a `Client`, not {instance.__class__.__name__}.')
         self.__context.instance = instance
 
     @property

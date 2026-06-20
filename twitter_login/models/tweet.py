@@ -7,10 +7,11 @@ from .base import model
 from .card import Card
 from .lazy import Lazy, LazyMixin
 from .notetweet import NoteTweet
-from .tweet_entities import URL, Hashtag, Mention, Symbol, TweetEntitiesMixin
+from .tweet_entities import TweetEntitiesMixin
 from .user import User
 
 if TYPE_CHECKING:
+    from .tweet_entities import URL, Hashtag, Mention, Symbol
     from ..client import Client
 
 

@@ -16,16 +16,22 @@ logger = getLogger(__name__)
 
 
 class AuthManager:
+    """
+    Manages authentication.
+    """
     def __init__(self, http: HTTPClient, api: API) -> None:
         self.http = http
         self.api = api
 
     def save_cookies(self, path):
+        """
+        Saves the cookies to the specific file.
+        """
         cookies = self.http.cookies.get_dict(COOKIES_DOMAIN)
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(cookies, f)
 
-    async def validate_authentication(self):
+    async def validate_cookies(self):
         """
         Validates authentication cookies.
         """
@@ -67,14 +73,13 @@ class AuthManager:
         guest_token = guest_token_match.group(1)
         self.http.cookies.set('gt', guest_token, COOKIES_DOMAIN)
 
-    async def login_with_cookies(self, cookies):
-        if not isinstance(cookies, dict):
-            raise ValueError('Cookies must be dict.')
+    async def login_with_cookies(self, cookies: dict, validate_cookies: bool):
         for k, v in cookies.items():
             if not isinstance(k, str):
                 raise ValueError('Cookie name must be str.')
             if not isinstance(v, str):
                 raise ValueError('Cookie value must be str.')
             self.http.cookies.set(k, v, COOKIES_DOMAIN)
-        await self.validate_authentication()
+        if validate_cookies:
+            await self.validate_cookies()
         await self.initialize_client_transaction()

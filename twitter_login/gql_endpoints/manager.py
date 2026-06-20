@@ -130,7 +130,7 @@ class GQLEndpointsManager:
 
     async def update_endpoints(self):
         """
-        Returns updated endpoints.
+        Updates GraphQL endpoints and returns updated endpoints.
         """
         updated_endpoints = await self.fetch_updated_endpoints()
         if not updated_endpoints:
@@ -146,6 +146,10 @@ class GQLEndpointsManager:
         return updated_endpoints
 
     async def update_state(self):
+        """
+        Updates GraphQL endpoints and feature switches.
+        Caches the state if it is updated.
+        """
         await self.load_html()
         results = await self.update_endpoints()
         feature_switches = self.get_feature_switches()

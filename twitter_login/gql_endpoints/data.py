@@ -1,4 +1,4 @@
-# Build Time: 2026-06-20 16:25:01.911651+00:00
+# Build Time: 2026-06-20 20:15:23.185511+00:00
 
 REQUIRED_ENDPOINTS_MAPPING = {
     'bundle.DirectMessages': [
@@ -79,10 +79,10 @@ REQUIRED_ENDPOINTS_MAPPING = {
 }
 
 BUILDTIME_HASH_MAPPING = {
-    'bundle.DirectMessages': '929a6ae',
-    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': '64435c0',
-    'main': 'bd30839',
-    'bundle.Communities': 'eb1d832',
+    'bundle.DirectMessages': 'a7562b1',
+    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': '5e3799f',
+    'main': '08b2cea',
+    'bundle.Communities': '6bc994a',
     'bundle.TweetEditHistory': '86bb173'
 }
 

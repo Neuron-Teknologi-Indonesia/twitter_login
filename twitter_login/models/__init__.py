@@ -1,3 +1,3 @@
 from .tweet import Tweet
-from .uploaded_media import UploadedMedia, build_tweet_media_parameter
+from .uploaded_media import UploadedMedia
 from .user import User

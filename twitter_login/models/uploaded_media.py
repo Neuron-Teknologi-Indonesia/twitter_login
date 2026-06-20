@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from logging import getLogger
 from typing import TYPE_CHECKING, Sequence
 
-from ..enums import MediaCategory, MediaState, SensitiveMediaWarning
+from ..enums import MediaState, SensitiveMediaWarning
 from ..errors import MediaUploadError
 from ..http import load_json_response
 from ..media import SUBTITLE_CATEGORIES, VIDEO_CATEGORIES
@@ -14,6 +14,7 @@ from ..utils import sort_enum_values
 from .base import model
 
 if TYPE_CHECKING:
+    from ..enums import MediaCategory
     from ..client import Client
 
 logger = getLogger(__name__)
@@ -239,19 +240,3 @@ class UploadedMedia:
             subtitle_info=subtitle_info
         )
         self._has_subtitles = True
-
-
-def build_tweet_media_parameter(media: list[UploadedMedia], tagged_users: list[str]):
-    media_entities = []
-    for m in media:
-        if not isinstance(m, UploadedMedia):
-            raise TypeError('Media must be an instance of `UploadedMedia`.')
-
-        media_entities.append({
-            'media_id': m.media_id,
-            'tagged_users': tagged_users
-        })
-    return {
-        'media_entities': media_entities,
-        'possibly_sensitive': False
-    }

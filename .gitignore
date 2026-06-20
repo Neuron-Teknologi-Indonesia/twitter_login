@@ -20,3 +20,6 @@ wheels/
 /*.jpg
 /*.mp4
 /*.gif
+/.ruff_cache
+/docs
+doc.mastache

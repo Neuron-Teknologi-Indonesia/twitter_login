@@ -5,14 +5,14 @@ import urllib.parse
 from logging import getLogger
 from typing import TYPE_CHECKING, Any
 
-from curl_cffi import Response
-
 from ..enums import SEARCH_TIMELINE_PRODUCT_TO_PARAM, SearchTimelineQuerySource
-from ..gql_endpoints.endpoint import Endpoint, GQLState
 from ..headers import HeadersConfig
 from .utils import UNSET, remove_unset
 
 if TYPE_CHECKING:
+    from curl_cffi import Response
+
+    from ..gql_endpoints.endpoint import Endpoint, GQLState
     from ..http import HTTPClient
 
 logger = getLogger(__name__)

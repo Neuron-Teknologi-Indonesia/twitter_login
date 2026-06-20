@@ -1,6 +1,6 @@
 import json
 from logging import INFO, getLogger
-from typing import Any
+from typing import Any, TYPE_CHECKING
 from urllib.parse import urlparse
 
 import curl_cffi
@@ -10,8 +10,10 @@ from .constants import AUTHORIZATION, COOKIES_DOMAIN
 from .errors import HTTPError
 from .headers import HeadersBuilder, HeadersConfig
 from .ratelimits import RatelimitsManager
-from .transaction_id import ClientTransaction
 from .headers import UserAgent
+
+if TYPE_CHECKING:
+    from .transaction_id import ClientTransaction
 
 logger = getLogger(__name__)
 http_logger = getLogger(__name__+'.http')
