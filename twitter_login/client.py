@@ -39,8 +39,8 @@ logger = getLogger(__name__)
 
 
 class Client:
-    def __init__(self, user_agent: UserAgent, impersonate: str):
-        http = HTTPClient(user_agent, impersonate=impersonate)
+    def __init__(self, user_agent: UserAgent, impersonate: str, *args, **kwargs):
+        http = HTTPClient(user_agent, impersonate=impersonate, *args, **kwargs)
         self._gql_endpoints_manager = GQLEndpointsManager(http)
         self._api = API(http, self._gql_endpoints_manager.state)
         self._auth_manager = AuthManager(http, self._api)

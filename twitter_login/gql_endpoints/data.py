@@ -1,4 +1,4 @@
-# Build Time: 2026-06-18 16:49:55.269857+00:00
+# Build Time: 2026-06-20 16:25:01.911651+00:00
 
 REQUIRED_ENDPOINTS_MAPPING = {
     'bundle.DirectMessages': [
@@ -79,10 +79,10 @@ REQUIRED_ENDPOINTS_MAPPING = {
 }
 
 BUILDTIME_HASH_MAPPING = {
-    'bundle.DirectMessages': '3c8e8f3',
-    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': '08711e7',
-    'main': 'fbfbe12',
-    'bundle.Communities': 'bd13332',
+    'bundle.DirectMessages': '929a6ae',
+    'shared~bundle.GrokDrawer~bundle.ReaderMode~bundle.Birdwatch~bundle.TwitterArticles~bundle.Compose~bundle.Sett': '64435c0',
+    'main': 'bd30839',
+    'bundle.Communities': 'eb1d832',
     'bundle.TweetEditHistory': '86bb173'
 }
 
@@ -2860,7 +2860,7 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'rweb_analytics_live_details_enabled': True,
     'rweb_analytics_live_overview_enabled': True,
     'rweb_analytics_nav_item_enabled': False,
-    'rweb_analytics_post_details_realtime_enabled': False,
+    'rweb_analytics_post_details_realtime_enabled': True,
     'rweb_analytics_spaces_details_enabled': True,
     'rweb_analytics_spaces_overview_enabled': True,
     'rweb_analytics_theme': False,
@@ -3285,7 +3285,7 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'xchat_unread_mismatch_scribing_enabled': True,
     'xchat_validate_priv_pub_on_load': False,
     'xchat_voice_messages_transcription_enabled': False,
-    'xstudio_rweb_live_studio_enabled': False,
+    'xstudio_rweb_live_studio_enabled': True,
     'x_android_apollo_graphql_accept_header_override': True,
     'xchat_message_composer_v2': False,
     'payments_web_external_app_enabled': False,
@@ -3293,7 +3293,7 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'responsive_web_quick_promote_cta_enabled': True,
     'responsive_web_quick_promote_high_budget_tier_enabled': False,
     'xchat_keypair_recovery_enabled': False,
-    'payments_support_grpc_enabled': False,
+    'payments_support_grpc_enabled': True,
     'payments_support_xchat_sessions_enabled': True,
     'responsive_web_android_quick_promote_stripe_elements_enabled': False,
     'rweb_cashtags_composer_attachment_size_customization_enabled': True,
@@ -3305,7 +3305,9 @@ BUILDTIME_DEFAULT_FEATURE_SWITCHES = {
     'xchat_media_upload_io_batching_enabled': True,
     'xchat_plaintext_grok_enabled': False,
     'xchat_url_preview_v2_enabled': True,
-    'rweb_home_jot_context_enabled': False,
+    'rweb_home_jot_context_enabled': True,
     'web_video_persist_bandwidth_estimate_enabled': False,
-    'xai_profile_redirect_enabled': False
+    'xai_profile_redirect_enabled': False,
+    'payments_funds_insurance_redesign_enabled': False,
+    'payments_funds_insurance_sweep_enabled': False
 }

@@ -6,6 +6,7 @@ __pycache__
 /*.txt
 /*.mp4
 /*.html
+/z
 
 __pycache__/
 *.py[oc]
