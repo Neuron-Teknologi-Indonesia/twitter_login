@@ -33,7 +33,7 @@ class SearchMixin(BaseMixin):
         self,
         query: str,
         product: Literal[
-            SearchTimelineProduct.LIVE,
+            SearchTimelineProduct.LATEST,
             SearchTimelineProduct.TOP,
             SearchTimelineProduct.MEDIA,
             SearchTimelineProduct.IMAGE,

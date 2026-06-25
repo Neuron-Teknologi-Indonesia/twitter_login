@@ -2,25 +2,20 @@ from enum import Enum
 
 
 class StrEnum(str, Enum):
+    """
+    :meta private:
+    """
     def __str__(self) -> str:
         return str(self.value)
 
 
 class UserState(StrEnum):
+    """
+    :meta private:
+    """
     NORMAL = 'normal'
     SUSPENDED = 'suspended'
     NOT_LOGGED_IN = 'not_logged_in'
-
-
-class SubtaskID(StrEnum):
-    LOGIN_JS_INSTRUMENTATION_SUBTASK = 'LoginJsInstrumentationSubtask'
-    LOGIN_ENTER_USER_IDENTIFIER_SSO = 'LoginEnterUserIdentifierSSO'
-    LOGIN_ENTER_ALTERNATE_IDENTIFIER_SUBTASK = 'LoginEnterAlternateIdentifierSubtask'
-    LOGIN_ENTER_PASSWORD = 'LoginEnterPassword'
-    LOGIN_TWO_FACTOR_AUTH_CHALLENGE = 'LoginTwoFactorAuthChallenge'
-    LOGIN_ACID = 'LoginAcid'
-    LOGIN_SUCCESS_SUBTASK = 'LoginSuccessSubtask'
-    DENY_LOGIN_SUBTASK = 'DenyLoginSubtask'
 
 
 class MediaState(StrEnum):
@@ -66,6 +61,10 @@ class ConversationControl(StrEnum):
 
 
 class SearchTimelineParam(StrEnum):
+    """
+    :meta private:
+    Search timeline URL f= parameters
+    """
     IMAGE = 'image'
     LIST = 'list'
     LIVE = 'live'
@@ -82,7 +81,7 @@ class SearchTimelineProduct(StrEnum):
     TOP = 'Top'
     USER = 'People'
     VIDEO = 'Videos'
-    LIVE = 'Latest'
+    LATEST = 'Latest'
 
 
 SEARCH_TIMELINE_PRODUCT_TO_PARAM = {
@@ -92,7 +91,7 @@ SEARCH_TIMELINE_PRODUCT_TO_PARAM = {
     SearchTimelineProduct.TOP: SearchTimelineParam.TOP,
     SearchTimelineProduct.USER: SearchTimelineParam.USER,
     SearchTimelineProduct.VIDEO: SearchTimelineParam.VIDEO,
-    SearchTimelineProduct.LIVE: SearchTimelineParam.LIVE
+    SearchTimelineProduct.LATEST: SearchTimelineParam.LIVE
 }
 
 
@@ -118,6 +117,9 @@ class SearchTimelineQuerySource(StrEnum):
 
 
 class InstructionType(StrEnum):
+    """
+    :meta private:
+    """
     # Timeline
     TIMELINE_ADD_ENTRIES = 'TimelineAddEntries'
     TIMELINE_REMOVE_ENTRIES = 'TimelineRemoveEntries'
